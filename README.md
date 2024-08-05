@@ -21,13 +21,10 @@ This project is designed to scrape reviews and information about Chrome extensio
    ```sh
    git clone https://github.com/yourusername/chrome-extension-reviews-scraper.git
    cd chrome-extension-reviews-scraper
-
-
 2.Create and activate a virtual environment (optional but recommended):
-    ```sh
+```sh
     python -m venv venv
     source venv/bin/activate   # On Windows, use `venv\Scripts\activate`
-
 3.Install the required dependencies:
     ```sh
 pip install -r requirements.txt
