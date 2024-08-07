@@ -31,6 +31,37 @@ This project is designed to scrape reviews and information about Chrome extensio
     playwright install
     ```
 
+
+## Setup Supabase 
+
+1. **Create Account on Supabase
+
+2. **Once You Create Supabase Account Go to SQL Editor and Then Paste This SQL code to Create Tables
+   
+    ```bash
+    CREATE TABLE extension_info (
+    id SERIAL PRIMARY KEY,
+    extension_name TEXT UNIQUE NOT NULL,
+    extension_url TEXT,
+    developer TEXT,
+    overall_rating TEXT,
+    total_rating TEXT,
+    extension_type TEXT,
+    total_users TEXT
+);
+
+CREATE TABLE extension_review (
+    id SERIAL PRIMARY KEY,
+    extension_name TEXT NOT NULL,
+    name TEXT,
+    date DATE,
+    rating TEXT,
+    review TEXT,
+    helpful TEXT
+);
+
+    ```
+
 ## Usage
 
 1. **Run the script**.
@@ -42,14 +73,14 @@ This project is designed to scrape reviews and information about Chrome extensio
 2. **Follow the prompt** to enter the keyword for the location search.
 
     ```plaintext
-    Enter Full KeyWord: [Type the location keyword and press Enter]
-    Example : "Bath UK" , "London UK" , "Exeter UK"
+    Enter Full Chrome Extention Review Link: 
+    Example : "https://chromewebstore.google.com/detail/freezen-matevpn-chrome/acjlblgibpeochegbmidehmaphkhdoec/reviews"
     ```
 
 3. **The script will automatically navigate** to the St. James's Place website
    ```plaintext
     You will get each script running status..!
-    Once the Scrapping get's over data will save to adviser_info.csv
+    Once the Scrapping get's over data will save to Supabase.
     ```
 
 
