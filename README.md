@@ -35,9 +35,9 @@ This project is designed to scrape reviews and information about Chrome extensio
 
 ## Setup Supabase 
 
-1. **Create Account on Supabase
+1. **Create Account on Supabase**
 
-2. **Once You Create Supabase Account Go to SQL Editor and Then Paste This SQL code to Create Tables
+2. **Once You Create Supabase Account Go to SQL Editor and Then Paste This SQL code to Create Tables**
    
     ```bash
     CREATE TABLE extension_info (
@@ -61,8 +61,8 @@ CREATE TABLE extension_review (
     helpful TEXT
 );
 
-    ```
-
+3. **Now Get your Supabase API URL and API Key From API Setting**
+    Once you Get your ApiKey and URL replace those in main.py code or apify.py code.
 ## Usage
 
 1. **Run the script**.
@@ -71,14 +71,14 @@ CREATE TABLE extension_review (
     python main.py
     ```
 
-2. **Follow the prompt** to enter the keyword for the location search.
+2. **Follow the prompt** 
 
     ```plaintext
     Enter Full Chrome Extention Review Link: 
     Example : "https://chromewebstore.google.com/detail/freezen-matevpn-chrome/acjlblgibpeochegbmidehmaphkhdoec/reviews"
     ```
 
-3. **The script will automatically navigate** to the St. James's Place website
+3. **Congratulations Scraping Process Starts From Here**
    ```plaintext
     You will get each script running status..!
     Once the Scrapping get's over data will save to Supabase.
