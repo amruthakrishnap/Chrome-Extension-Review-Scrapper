@@ -49,17 +49,17 @@ This project is designed to scrape reviews and information about Chrome extensio
     total_rating TEXT,
     extension_type TEXT,
     total_users TEXT
-);
-
-CREATE TABLE extension_review (
-    id SERIAL PRIMARY KEY,
-    extension_name TEXT NOT NULL,
-    name TEXT,
-    date DATE,
-    rating TEXT,
-    review TEXT,
-    helpful TEXT
-);
+    );
+    
+    CREATE TABLE extension_review (
+        id SERIAL PRIMARY KEY,
+        extension_name TEXT NOT NULL,
+        name TEXT,
+        date DATE,
+        rating TEXT,
+        review TEXT,
+        helpful TEXT
+    );
 
 3. **Now Get your Supabase API URL and API Key From API Setting**
     Once you Get your ApiKey and URL replace those in main.py code or apify.py code.
