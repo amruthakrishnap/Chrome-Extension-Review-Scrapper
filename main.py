@@ -4,15 +4,15 @@ from bs4 import BeautifulSoup
 import re
 
 # Supabase configuration
-url = 'https://vjgxtqqrbehmoqsgorvq.supabase.co'
-key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZqZ3h0cXFyYmVobW9xc2dvcnZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjI4NTI5ODcsImV4cCI6MjAzODQyODk4N30.Qlhws14rMtrM7frgxLKgM6flg3I1JvJ-JPd5gd6A3-Q'
+url = 'Replace Your Supabase URL HERE'
+key = 'Replace Your Supabase Anon (Key) Here'
 supabase: Client = create_client(url, key)
-link = 'https://chromewebstore.google.com/detail/chatgpt-organize-with-fol/jijhgfapogfphcccjlpoiphpjgedblpo/reviews'
-
+# link = 'https://chromewebstore.google.com/detail/chatgpt-organize-with-fol/jijhgfapogfphcccjlpoiphpjgedblpo/reviews'
+link=input("Enter Chrome Extention Review Link : ")
 def main():
     with sync_playwright() as p:
         # Launch the browser
-        browser = p.chromium.launch(headless=True)
+        browser = p.chromium.launch()
         page = browser.new_page()
 
         # Load the page
@@ -56,14 +56,14 @@ def main():
         total_users_elements = soup.find_all(class_='F9iKBc')
 
         # Debugging: Print out found elements
-        print(f"Found extension name elements: {len(extension_name_elements)}")
-        print(f"Found extension URL elements: {len(extension_url_elements)}")
-        print(f"Found developer elements: {len(developer_elements)}")
-        print(f"Found overall rating elements: {len(overall_rating_elements)}")
-        print(f"Found total rating elements: {len(total_rating_elements)}")
-        print(f"Found extension type elements: {len(extension_type_elements)}")
-        print(f"Found developer details elements: {len(developer_details_elements)}")
-        print(f"Found total users elements: {len(total_users_elements)}")
+        # print(f"Found extension name elements: {len(extension_name_elements)}")
+        # print(f"Found extension URL elements: {len(extension_url_elements)}")
+        # print(f"Found developer elements: {len(developer_elements)}")
+        # print(f"Found overall rating elements: {len(overall_rating_elements)}")
+        # print(f"Found total rating elements: {len(total_rating_elements)}")
+        # print(f"Found extension type elements: {len(extension_type_elements)}")
+        # print(f"Found developer details elements: {len(developer_details_elements)}")
+        # print(f"Found total users elements: {len(total_users_elements)}")
 
         extension_name = extension_name_elements[0].get_text(strip=True) if extension_name_elements else 'No name found'
         if extension_url_elements:
