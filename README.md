@@ -6,7 +6,8 @@ This project is designed to scrape reviews and information about Chrome extensio
 
 - Python 3.7+
 - Pip (Python package installer)
-- Supabase Credentials [Optional]
+- Supabase Credentials
+- To Set CRON Job : Need to Create Apify Account [Optional]
 
 ## Installation
 
